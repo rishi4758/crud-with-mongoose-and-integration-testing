@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
- "server": "cd server &&  node index"
+     "start": " cd server node index.js"
+
 
   },
   "author": "",
