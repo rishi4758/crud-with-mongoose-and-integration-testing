@@ -16,7 +16,7 @@ let compo;
 beforeEach(() => {
   compo = setUp();
 });
-describe("DetailsComponent", () => {
+describe("ListComponent", () => {
   it("checking the delete button ", () => {
     const wrapper = findByTestAtrr(compo, "delBtn");
     expect(wrapper.length).toBe(1);

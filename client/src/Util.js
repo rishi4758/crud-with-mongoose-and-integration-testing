@@ -18,6 +18,6 @@ export const checkProps = (component, expectedProps) => {
 };
 
 export const testStore = (initialState) => {
-  const createStoreWithMiddleware = applyMiddleware(reduxthunk)();
+  const createStoreWithMiddleware = applyMiddleware(reduxthunk)(createStore);
   return createStoreWithMiddleware(rootReducer, initialState);
 };

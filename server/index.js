@@ -30,7 +30,18 @@ require("./modal/mobileSchema");
 
 require("./Router/cart.js")(app);
 require("./Router/deviceList.js")(app);
-// require("./Router/category.js")(app);
+if (process.env.NODE_ENV === "production") {
+  // express serveve up production assets
+  // like main.js or main.css
+  app.use(express.static("../client/build"));
+
+  // express will serve index.html
+  // if it does not find the route
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+  });
+}
 
 // connect to data base
 mongoose
