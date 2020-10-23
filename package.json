@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "cd server && npm install && npm start",
-     "start": " cd server && node index.js"
+       "start": "node server",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
 
 
   },
